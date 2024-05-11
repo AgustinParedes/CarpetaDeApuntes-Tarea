@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>"Elementos de entrada"</label> <br><br>
+    
+    <label>Texto</label>
+    <input type="text"> <br><br>
+
+    <label>Texto2</label>
+    <input type="text" id="Texto2" oninvalid="this.setCustomValidity('Texto')" required alt = "Esto tiene que ser texto" placeholder="Ingrese un número"> <br><br>
+                                                                    
+
+    <label>Numero</label>
+    <input type="number" disabled> <br><br>
+                        <!--"disabled = desabilitado hasta que se ponga una condición que lo habilite (sengun Cande)"-->
+    <label>Fecha</label>
+    <input type="date"> <br><br>
+
+    <label>Chechbox</label>
+    <input type="checkbox"> <br><br>
+
+    <label>Radio</label>
+    <input type="radio"> <br><br>
+
+    <label">Archivo</label>
+    <input type="file"> <br><br>
+
+    <label>Password</label>
+    <input type="password"> <br><br>
+
+    <label>Color Piker</label>
+    <input type="color"> <br><br>
+
+
+    <label>Selectores</label> <br> <!--Este es un elemento de etiqueta que proporciona una descripción para el menú desplegable.-->
+    <select id="menu">
+        <option value="1">Opción 1</option>
+        <option value="2" selected>Opcion 2</option> <!---selected: significa que esta opción está seleccionada por defecto cuando se carga la 
+                                                        página-->
+</select> <br><br>
+
+
+    <label>Areas de Texto</label> 
+    <textarea></textarea> <br><br><!--cuadro de texto que tiene salto de linea incluido-->
+
+    <label>Botones</label>
+    <button type="button">Boton Común</button> <br> <!--no tiene una acción predeterminada cuando se hace clic en él. No enviará un 
+                                                        formulario por sí mismo. Este tipo de botón se utiliza a menudo en combinación 
+                                                        con JavaScript para activar una función o realizar una acción cuando se hace clic en el botón.-->
+    <button type="submit">Boton Summit</button> <br> <!--cuando se hace clic, envía el formulario en el que se encuentra. Es decir, 
+                                                        recopila todos los datos ingresados en los campos del formulario y los envía
+                                                        a la dirección especificada en el atributo 'action' del formulario.-->
+
+    <script>
+        debugger;
+        const inputTexto = document.getElementById("texto") /*Esta línea busca en el documento HTML un elemento con el id “texto” 
+                                                                y lo guarda en la constante 'inputTexto'*/
+        inputTexto.value = "Texto de ejemplo" /*<!-Esta línea establece el valor del elemento "inputTexto" a "Texto de Ejemplo"-->*/
+        inputTexto.style = "height: 100px"
+        inputTexto.style.backgroundColor = "black"
+        const menuSelect = document.getElementById('menu') /*<!--Esta línea busca en el documento HTML un elemento con el id “menu” 
+                                                            y lo guarda en la constante 'menuSelect'-->*/
+        menuSelect.value = "1" /*<!--Esta línea establece el valor del elemento menuSelect a “1”. Si 'menuSelect' es un menú desplegable, 
+                                                            por ejemplo, se seleccionará la opción con el valor “1”.-->*/
+
+    </script>
+</body>
+</html>
+
+

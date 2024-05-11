@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label>Numero 1</label> <br>
+    <input type="number" id="numero1"> <br><br>
+
+    <label>Numero 2</label> <br>
+    <input type="number" id="numero2"> <br><br>
+    
+
+    <option value = "0" >Seleccione una operación</option>
+    <select id="operacionSelect" >  <!--onchange="operacion()" seleccionado-->
+        <option value = "1">Suma</option>
+        <option value = "2">Resta</option>
+        <option value = "3">Multiplicación</option>
+        <option value = "4">División</option>
+    </select>
+
+    <button type="button" onclick="operacion()">Boton</button> <br><br>
+
+    <div id="resultadoDiv">
+        0
+    </div>
+
+    <script>
+        function operacion(){
+            const selectValor = document.getElementById('operacionSelect').value
+            const numero1 = +document.getElementById('numero1').value 
+            const numero2 = +document.getElementById('numero2').value 
+            /*const numero3 = +document.getElementById('numero3').value  (esto es por si queres agregar mas números, modo ejemplo)
+            const numero4 = +document.getElementById('numero4').value*/
+
+
+            let resultado = 0
+
+            switch(selectValor){
+                case "1": 
+                resultado = numero1 + numero2
+                break;
+
+                case "2":arguments
+                resultado = numero1 - numero2
+                break;
+            
+
+                case "3":arguments
+                resultado = numero1 * numero2
+                break;
+
+                case "4":arguments
+                if (numero1 < numero2) {
+                    alert("Número 1 debe ser mayor que Número 2 para ser divisible")
+                break;
+                        
+                
+                }else{
+                resultado = numero1 / numero2
+                break;
+                    
+
+                        }
+
+        }
+            
+        const resultadoDiv = document.getElementById('resultadoDiv')
+            resultadoDiv.innerText = resultado
+
+            switch(selectValor){
+                case "1": 
+                resultadoDiv.style.color = "red" 
+                break;
+
+                case "2":arguments
+                resultadoDiv.style.color = 'blue' 
+                break;
+            
+
+                case "3":arguments
+                resultadoDiv.style.color = 'lightgreen' 
+                break;
+
+                case "4":arguments
+                resultadoDiv.style.color = "orange" 
+                break;
+                        
+
+                }
+        }
+
+        function alertaConsola(){
+            console.log('Se tocó el boton')
+        }
+    </script>
+</body>
+</html>
